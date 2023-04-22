@@ -1,0 +1,40 @@
+créer une liste de tâches (To-Do List) avec les fonctionnalités suivantes :
+
+Ajouter une tâche : Les utilisateurs doivent pouvoir ajouter une nouvelle tâche en entrant du texte dans un champ de saisie et en appuyant sur un bouton "Ajouter".
+
+Afficher la liste des tâches : Les tâches ajoutées doivent être affichées dans une liste, avec chaque tâche sous forme de texte.
+
+Marquer une tâche comme terminée : Les utilisateurs doivent pouvoir marquer une tâche comme terminée en cliquant dessus. Une fois qu'une tâche est marquée comme terminée, elle doit être barrée ou changée de couleur pour indiquer son état.
+
+Supprimer une tâche : Les utilisateurs doivent pouvoir supprimer une tâche en cliquant sur un bouton "Supprimer" à côté de chaque tâche.
+
+Filtrer les tâches : Ajouter des boutons pour filtrer les tâches en fonction de leur état (toutes, actives et terminées).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution :
+Créez un nouveau projet React en utilisant create-react-app.
+
+Créez un composant Task qui représente une tâche individuelle, y compris son texte et son état (terminée ou non). Vous pouvez utiliser l'état local (useState) pour gérer l'état de chaque tâche.
+
+Créez un composant TaskList qui contiendra et affichera la liste des tâches. Utilisez l'état local pour stocker la liste des tâches et passez les fonctions pour ajouter, supprimer et basculer l'état des tâches aux composants enfants.
+
+Ajoutez un champ de saisie et un bouton "Ajouter" pour permettre aux utilisateurs d'ajouter de nouvelles tâches à la liste.
+
+Implémentez la fonctionnalité de suppression des tâches et de basculement de leur état (terminée ou non) en modifiant la liste des tâches stockée dans l'état local du composant TaskList.
+
+Ajoutez des boutons pour filtrer les tâches en fonction de leur état et mettez à jour l'affichage de la liste des tâches en fonction du filtre sélectionné.
