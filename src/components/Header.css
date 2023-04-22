@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+  border-bottom: solid black 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 8.75rem;
+  gap: 5rem;
+}
+.header .nav p {
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+.header .nav p:hover {
+  text-decoration-line: underline;
+}
+.header .logo_header img {
+  width: 30%;
+}/*# sourceMappingURL=Header.css.map */
