@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
 
-const Main = () => {
+const Main = ({div_title}) => {
   return (
     <div className='Main'>
       <main>
@@ -18,10 +18,11 @@ const Main = () => {
         {/*petit bouton pour renommer ou supprimer la liste a coté de sa selection */}
         </div> {/*mettre une sorte de menu déroulant ou on peut choisir differentes listes*/}
         <div className="Taches">
-          <div className="tache1">
-            <h1>Titre tache</h1>
+          <div className="tache">
+            <h1>{div_title}</h1>
             <p>description</p>
             <p>fait ?</p>
+            {/* ajouter gestion dates */}
           </div>
         </div>
 
