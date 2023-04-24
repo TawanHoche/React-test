@@ -5,13 +5,13 @@ import Add from './components/add'
 import Del from './components/del'
 import Filter from './components/filter'
 
-const Aside = (test) => {
+const Aside = ({addTask}) => {
 
   return (
     <div className='Aside'>
       <aside>
         <Done/>
-        <Add test={test}/>
+        <Add addTask={addTask}/>
         <Del/>
         <Filter/>
       </aside>

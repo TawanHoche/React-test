@@ -1,7 +1,8 @@
 import React from 'react'
 import './Main.css'
 
-const Main = ({div_title}) => {
+const Main = ({TaskData}) => {
+  
   return (
     <div className='Main'>
       <main>
@@ -18,14 +19,17 @@ const Main = ({div_title}) => {
         {/*petit bouton pour renommer ou supprimer la liste a coté de sa selection */}
         </div> {/*mettre une sorte de menu déroulant ou on peut choisir differentes listes*/}
         <div className="Taches">
-          <div className="tache">
-            <h1>{div_title}</h1>
-            <p>description</p>
-            <p>fait ?</p>
-            {/* ajouter gestion dates */}
-          </div>
-        </div>
+          {console.log(TaskData)}
+          {TaskData.map((task, index) => (
+            <div key={index} className='tache'>
+              <h1>{task.titre}</h1>
+              <p>{task.description}</p>
+              <p>fait ?</p>
+              {/* ajouter gestion dates */}
+            </div>
+          ))}
 
+        </div>
       </main>
     </div>
   )

@@ -1,6 +1,6 @@
 .Aside {
   display: flex;
-  flex: 0.4;
+  flex: 0.5;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -11,4 +11,14 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+}
+.Aside aside .done, .Aside aside .add, .Aside aside .del, .Aside aside .filter {
+  box-shadow: 10px 5px 5px black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 25rem;
+  height: auto;
+  padding: 0.2rem;
+  font-size: 1.3rem;
 }/*# sourceMappingURL=Aside.css.map */
