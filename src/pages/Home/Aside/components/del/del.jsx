@@ -6,8 +6,8 @@ const Del = () => {
     <div className="del">
     <p>Voulez-vous supprimer cette tâche</p>
     <div className="del_buttons">
-      <button>Oui</button>
-      <button>Non</button>
+      <button disabled>Oui</button>
+      <button disabled>Non</button>
     </div>
   </div>
   )

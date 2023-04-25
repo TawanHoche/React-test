@@ -1,12 +1,12 @@
 import React from 'react'
 import './Header.css'
-import blob from '../../blob.svg'
+import blob from '../../assets/blob.svg'
 
 const Header = ({onButtonClick}) => {
   return (
     <header className='header'>
         <nav className='nav'>
-        <p onClick={() => onButtonClick('content')}>TO-DO list</p>
+        <p onClick={() => onButtonClick('home')}>TO-DO list</p>
         <p onClick={() => onButtonClick('user')}>Changer d'utilisateur</p>
         </nav>
         <div className="logo_header">
