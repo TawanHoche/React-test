@@ -1,15 +1,30 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Main.css'
 
 const Main = ({TaskData, SelectTask}) => {
-  const [taskId, setTaskId] = useState(null)
 
-  const handleTaskId = (e) => {
-    setTaskId(e.target.id)
-    const ElementId = document.getElementById(taskId)
-    SelectTask(ElementId)
-  }
-  
+  const handleTaskSelection = (e) => {
+    const TaskId = document.getElementById(e.currentTarget.id)
+    const TaskList = document.getElementsByClassName('task')
+
+    if (TaskId.classList.contains('task-selected')) {
+      TaskId.classList.remove('task-selected')
+      SelectTask(null)
+      for (let i = 0; i < TaskList.length; i++) {
+        TaskList[i].classList.remove('task-disabled')
+      }
+    } else {
+      for (let i = 0; i < TaskList.length; i++) {
+        TaskList[i].classList.remove('task-selected');
+      }
+      TaskId.classList.add('task-selected')
+      SelectTask(TaskId);
+      for (let i = 0; i < TaskList.length; i++) {
+        TaskList[i] !== TaskId ? TaskList[i].classList.add('task-disabled') : TaskList[i].classList.remove('task-disabled');
+        }
+      }
+    }
+
   return (
     <div className='Main'>
       <main>
@@ -27,7 +42,7 @@ const Main = ({TaskData, SelectTask}) => {
         </div> {/*mettre une sorte de menu déroulant ou on peut choisir differentes listes*/}
         <div className="Tasks">
           {TaskData.map((task, index) => (
-            <div key={index} className={'task'} id={(index+1)}onClick={handleTaskId}>
+            <div key={index} className={'task'} id={'task' + (index+1)}onClick={handleTaskSelection}>
               <h1>{task.titre}</h1>
               <p>{task.description}</p>
               <p>fait ?</p>

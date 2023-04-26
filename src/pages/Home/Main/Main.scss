@@ -21,6 +21,7 @@
             margin-top: 3rem;
             overflow:auto;
             height: 74vh;
+            
 
             &::-webkit-scrollbar{
                 display: none;
@@ -42,12 +43,31 @@
                 box-shadow: 10px 5px 5px black;
 
                 margin-bottom: 2rem;
-                margin-left: 0.9375rem;
-                margin-right: 0.9375rem;
+                margin-left: 3rem;
+                margin-right: 3rem;
                 padding: 0.2rem;
 
-                
-            }
+                transition: transform 0.3s ease-in-out;
+
+                cursor: pointer;
+                user-select: none;
+             
+                &:hover {
+                transform: scale(1.05);
+                }
+
+                &-selected {
+                    filter: drop-shadow(0 0 0.5rem rgb(232, 174, 66));
+                }
+
+                &-disabled {
+                    opacity: 0.5;
+                }
+        }
+
+            #task1 {
+                margin-top:1rem;
+            }    
         }
     }
 }

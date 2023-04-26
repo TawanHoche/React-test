@@ -1,36 +1,38 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import Aside from './Aside'
 
-
-
 const Home = ()  => {
-    const [addTask, setAddTask] = useState([])
+    const [useTaskData, setUseTaskData] = useState([])
 
 
-    const handleNewDiv = (TaskData) => {
-      setAddTask([...addTask, TaskData])
+    const handleNewTask = (TaskData) => {
+        setUseTaskData([...useTaskData, TaskData])
     }
 
     const handleDone = (TaskData) => {
-        setAddTask([...addTask, TaskData])
+        console.log(TaskData)
     }
 
-    const [taskDiv, setTaskDiv] = useState()
 
-    const handleTaskDiv =  (SelectTask) => {
-        setTaskDiv(SelectTask)
-        ChangeDivName()
+    const [useTaskId, setUseTaskId] = useState()
+
+    const handleTaskId = (SelectTask) => {
+        setUseTaskId(SelectTask)
     }
 
-    const ChangeDivName = () => {
-        console.log(taskDiv)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(() => {useTaskId && ChangeSelectedTaskClass()}, [useTaskId])
+
+    const ChangeSelectedTaskClass = () => {
+        useTaskId.classList.add('task-selected')
     }
+
 
     return (
         <div className='home'>
-            <Main TaskData = {addTask} SelectTask={handleTaskDiv}/>
-            <Aside addTask={handleNewDiv} taskDone={handleDone}/>
+            <Main TaskData = {useTaskData} SelectTask={handleTaskId} />
+            <Aside addTask={handleNewTask} taskDone={handleDone}/>
         </div>
     )
 }

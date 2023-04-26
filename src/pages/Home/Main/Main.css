@@ -35,7 +35,24 @@
   height: auto;
   box-shadow: 10px 5px 5px black;
   margin-bottom: 2rem;
-  margin-left: 0.9375rem;
-  margin-right: 0.9375rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   padding: 0.2rem;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.Main main .Tasks .task:hover {
+  transform: scale(1.05);
+}
+.Main main .Tasks .task-selected {
+  filter: drop-shadow(0 0 0.5rem rgb(232, 174, 66));
+}
+.Main main .Tasks .task-disabled {
+  opacity: 0.5;
+}
+.Main main .Tasks #task1 {
+  margin-top: 1rem;
 }/*# sourceMappingURL=Main.css.map */
