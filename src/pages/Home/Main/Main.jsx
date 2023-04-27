@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Main.css'
 
-const Main = ({TaskData, SelectTask, SelectedTaskData}) => {
-
-const [useTest, setUseTest] = useState('false')
-useEffect(() => {SelectedTaskData === true ? setUseTest('true') : setUseTest('false')}, [SelectedTaskData])
-
+const Main = ({TaskData, SelectTask})  => {
 
   const handleTaskSelection = (e) => {
     const TaskId = document.getElementById(e.currentTarget.id)
@@ -29,6 +25,8 @@ useEffect(() => {SelectedTaskData === true ? setUseTest('true') : setUseTest('fa
       }
     }
 
+//a modifier pour arreter de tout faire en modifiant le DOM, s'aider de Main.test.jsx mais en gardant la logique de selection des tasks
+
   return (
     <div className='Main'>
       <main>
@@ -49,7 +47,7 @@ useEffect(() => {SelectedTaskData === true ? setUseTest('true') : setUseTest('fa
             <div key={index} className={'task'} id={'task' + (index+1)}onClick={handleTaskSelection}>
               <h1>{task.titre}</h1>
               <p>{task.description}</p>
-              <p>{useTest} </p>
+              <p>fait ?</p>
               {/* ajouter gestion dates */}
             </div>
           ))}
