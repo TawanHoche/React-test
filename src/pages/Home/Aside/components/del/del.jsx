@@ -1,13 +1,23 @@
 import React from 'react'
 import './del.css'
 
-const Del = () => {
+const Del = ({delTask}) => {
+  const [useDelTask, setUseDelTask] = React.useState(false)
+  const handleDelTask = () => {
+    setUseDelTask(true)
+    test()
+
+  }
+
+  const test = () => {
+    delTask(useDelTask)
+  }
+
   return (
     <div className="del">
-    <p>Voulez-vous supprimer cette tâche</p>
+    <p>Supprimer cette tâche</p>
     <div className="del_buttons">
-      <button disabled>Oui</button>
-      <button disabled>Non</button>
+      <button onClick={handleDelTask}>Supprimer</button>
     </div>
   </div>
   )

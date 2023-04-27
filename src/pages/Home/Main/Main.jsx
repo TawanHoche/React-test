@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Main.css'
 
-const Main = ({TaskData, SelectTask}) => {
+const Main = ({TaskData, SelectTask, SelectedTaskData}) => {
+
+const [useTest, setUseTest] = useState('false')
+useEffect(() => {SelectedTaskData === true ? setUseTest('true') : setUseTest('false')}, [SelectedTaskData])
+
 
   const handleTaskSelection = (e) => {
     const TaskId = document.getElementById(e.currentTarget.id)
@@ -45,7 +49,7 @@ const Main = ({TaskData, SelectTask}) => {
             <div key={index} className={'task'} id={'task' + (index+1)}onClick={handleTaskSelection}>
               <h1>{task.titre}</h1>
               <p>{task.description}</p>
-              <p>fait ?</p>
+              <p>{useTest} </p>
               {/* ajouter gestion dates */}
             </div>
           ))}
