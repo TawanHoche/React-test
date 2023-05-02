@@ -6,6 +6,8 @@ const Add = ({addTask}) => {
 
   const [titre, setTitre] = useState('')
   const [description, setDescription] = useState('')
+  const [id, setId] = useState(1)
+  const [isSelected, setIsSelected] = useState(false)
 
   const handleTaskName = (e) => {
     setTitre(e.target.value)
@@ -16,9 +18,12 @@ const Add = ({addTask}) => {
   }
 
   const handleAddDiv = () => {
-    addTask({titre, description})
+
+    addTask({titre, description, id, isSelected})
     setTitre('')
     setDescription('')
+    setId(id + 1)
+  
   }
 
   return (
