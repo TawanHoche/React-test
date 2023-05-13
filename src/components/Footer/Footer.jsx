@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <footer>
-      © Antoine Hochard | Avril 2023
+      © Antoine Hochard | Mai 2023
       </footer>
     </div>
   )

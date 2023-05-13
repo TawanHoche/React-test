@@ -25,8 +25,7 @@ const Main = ({TaskData, SelectTask})  => {
       }
     }
 
-//a modifier pour arreter de tout faire en modifiant le DOM, s'aider de Main.test.jsx mais en gardant la logique de selection des tasks
-
+//a modifier pour arreter de tout faire en modifiant le DOM
   return (
     <div className='Main'>
       <main>

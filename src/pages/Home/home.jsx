@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Main from './Main/Main.test'
+import Main from './Main/Main.jsx'
 import Aside from './Aside'
 
 const Home = ()  => {
