@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './assets/global.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './pages/Home/home.jsx'
+import Home from './pages/Home/home.test'
 import Utilisateur from './pages/Utilisateur'
 
 

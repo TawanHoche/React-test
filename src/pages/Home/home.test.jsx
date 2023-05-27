@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import Main from './Main/Main.jsx'
-import Aside from './Aside'
+import Main from './components/Main/Main.test'
+import Aside from './components/Aside'
 
 const Home = ()  => {
     // Récupération des données dans la nouvelle Task

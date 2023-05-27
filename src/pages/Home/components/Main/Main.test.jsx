@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import './Main.css'
+import Task from '../../../../components/Task/Task'
 
 const Main = ({ TaskData, SelectTask }) => {
   const taskRefs = useRef([]);
@@ -27,19 +28,7 @@ const Main = ({ TaskData, SelectTask }) => {
       }
   };
 
-  const Task = ({ task, index, handleTaskSelection, taskRef }) => {
-    return (
-        <div
-            className="task"
-            id={`task${index + 1}`}
-            onClick={handleTaskSelection}
-            ref={(element) => (taskRef.current[index] = element)}>
-            <h1>{task.titre}</h1>
-            <p>{task.description}</p>
-            <p>fait ?</p>
-        </div>
-    );
-  };
+
 
   return (
     <div className="Main">
